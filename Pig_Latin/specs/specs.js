@@ -20,4 +20,8 @@ describe('pigLatin', function() {
     expect(pigLatin('squeal')).to.equal('ealsquay');
   });
 
+  it("treats y as a consonant when y is at the beginning of a word", function() {
+    expect(pigLatin('shyness')).to.equal('ynessshay');
+  });
+
 });
