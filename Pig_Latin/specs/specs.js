@@ -21,6 +21,10 @@ describe('pigLatin', function() {
   });
 
   it("treats y as a consonant when y is at the beginning of a word", function() {
+    expect(pigLatin('yes')).to.equal('esyay');
+  });
+
+  it("treats y as a vowel when its somewhere else in the word", function() {
     expect(pigLatin('shyness')).to.equal('ynessshay');
   });
 

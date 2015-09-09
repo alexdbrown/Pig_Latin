@@ -7,15 +7,19 @@ var pigLatin = function(word) {
   for (var i = 0; i < word.length; i++) {
 
     if (vowels.indexOf(firstLetter) !== -1) {
-      var vowelWord = word + 'ay';
-      return vowelWord;
+
+       if (word[0] == 'y') {
+          vowels.pop();
+          continue;
+
+          } else {
+            var vowelWord = word + 'ay';
+            return vowelWord;
+          }
 
     } else if (vowels.indexOf(firstLetter) == -1) {
         for (var i = 0; i < word.length; i++) {
-
-        if(word[1] == 'y') {
-          break;
-        } else if (word[i] == 'q' && word[i+1] == 'u') {
+        if (word[i] == 'q' && word[i+1] == 'u') {
           fragment.push(word[i], word[i+1]);
 
         } else if (vowels.indexOf(word[i]) == -1)  {
