@@ -12,15 +12,21 @@ var pigLatin = function(word) {
         var fragment = [];
 
         for (var i = 0; i < word.length; i++) {
-          if (vowels.indexOf(word[i]) == -1) {
+
+        if (word[i] == 'q' && word[i+1] == 'u') {
+          fragment.push( word[i], word[i+1]);
+
+        } else if (vowels.indexOf(word[i]) == -1)  {
             fragment.push(word[i]);
-          } else {
+        } else {
               break;
-            }
+          }
+
         }
     }
       var fragmentString = fragment.toString().replace(/,/g, '');
       var sliceWord = word.slice(fragment.length) + fragmentString + 'ay';
       return sliceWord;
   }
+
 };

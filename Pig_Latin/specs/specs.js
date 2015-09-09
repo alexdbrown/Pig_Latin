@@ -13,11 +13,11 @@ describe('pigLatin', function() {
   });
 
   it("cuts all consecutive consonants and adds them to the end of the word, and then adds ay", function() {
-    expect(pigLatin('lkmnhomg')).to.equal('omglkmnhay');
+    expect(pigLatin('llama')).to.equal('amallay');
   });
 
   it("moves the u along with the q in words that start with qu and then adds ay", function() {
-    expect(pigLatin('squeal')).to.equal('ealsqu');
+    expect(pigLatin('squeal')).to.equal('ealsquay');
   });
 
 });
