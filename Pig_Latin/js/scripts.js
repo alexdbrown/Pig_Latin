@@ -36,3 +36,19 @@ var pigLatin = function(word) {
   }
 
 };
+
+$(document).ready(function(){
+
+  $("form#pig-latin").submit(function(event) {
+    var word = $("input#word").val();
+    var result = pigLatin(word);
+
+    $(".word").text(word);
+    $(".latin").text(result);
+
+    $("#result").show();
+    event.preventDefault();
+
+  });
+
+});
