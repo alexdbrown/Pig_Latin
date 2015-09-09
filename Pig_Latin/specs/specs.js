@@ -9,7 +9,7 @@ describe('pigLatin', function() {
   });
 
   it("cuts the first consecutive consonants from the beginning of the word and adds ay to the end", function() {
-    expect(pigLatin('coffee')).to.equal('offeeay');
+    expect(pigLatin('coffee')).to.equal('offeecay');
   });
 
   // it("adds the first consecutive consonants ")
